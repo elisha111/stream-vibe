@@ -48,7 +48,7 @@
   width: $size;
   height: $size;
 }
-@mixin visibility-hidden {
+@mixin visually-hidden {
   position: absolute !important;
   width: 1px !important;
   height: 1px !important;
