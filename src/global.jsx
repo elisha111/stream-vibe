@@ -5,7 +5,7 @@ import Header from "@/layouts/Header"
 import { Head } from "minista"
 
 export default function (props) {
-  const { children, title, url } = props
+  const { children, title, url, isHeaderFixed } = props
 
   return (
     <>
@@ -31,7 +31,7 @@ export default function (props) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Header url={url} />
+      <Header url={url} isFixed={isHeaderFixed} />
       <Content>{children}</Content>
       <Footer />
     </>
