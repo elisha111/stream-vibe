@@ -12,8 +12,9 @@ const Button = (props) => {
     label,
     isLabelHidden = false,
     iconName,
-    mode = "", // '' = (default) | 'transparent'
+    mode = "", // '' = (default) | 'transparent' | 'black-10'
     iconPosition = "before", // 'before' | 'after'
+    hasFillIcon,
   } = props
 
   const isLink = href !== undefined
@@ -26,7 +27,7 @@ const Button = (props) => {
   const title = isLabelHidden ? label : undefined
 
   const iconComponent = iconName && (
-    <Icon name={iconName} className="button__icon" />
+    <Icon name={iconName} className="button__icon" hasFill={hasFillIcon} />
   )
 
   return (
