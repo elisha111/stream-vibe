@@ -1,7 +1,16 @@
 import classNames from "classnames"
+import "./Section.scss"
 
 const Section = (props) => {
-  const { className, title, titleId, description, actions, children } = props
+  const {
+    className,
+    title,
+    titleId,
+    description,
+    actions,
+    isActionsHiddenOnMobile = false,
+    children,
+  } = props
 
   return (
     <section
@@ -19,7 +28,15 @@ const Section = (props) => {
             </div>
           )}
         </div>
-        {actions && <div className="section__actions">{actions}</div>}
+        {actions && (
+          <div
+            className={classNames("section__actions", {
+              "hidden-mobile": isActionsHiddenOnMobile,
+            })}
+          >
+            {actions}
+          </div>
+        )}
       </header>
       <div className="section__body">{children}</div>
     </section>

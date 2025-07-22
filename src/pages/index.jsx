@@ -1,3 +1,4 @@
+import Categories from "@/sections/Categories"
 import Hero from "@/sections/Hero"
 import Questions from "@/sections/Questions"
 
@@ -10,6 +11,7 @@ export default function () {
   return (
     <>
       <Hero />
+      <Categories />
       {/* <Questions /> */}
     </>
   )
