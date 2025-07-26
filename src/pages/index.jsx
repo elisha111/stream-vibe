@@ -14,7 +14,7 @@ export default function () {
       <Hero />
       <Categories />
       <Devices />
-      {/* <Questions /> */}
+      <Questions />
     </>
   )
 }
