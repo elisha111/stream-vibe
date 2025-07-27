@@ -23,10 +23,10 @@ const Questions = () => {
       actions={<Button label="Ask a Question" href="/support" />}
     >
       <AccordionGroup columns={2}>
-        {questionsItems.map((questions, index) => (
+        {questionsItems.map((question, index) => (
           <Accordion
-            title={questions}
-            id={`questions-${index}`}
+            title={question}
+            id={`question-${index}`}
             name="questions"
             isOpen={index === 0}
             key={index}

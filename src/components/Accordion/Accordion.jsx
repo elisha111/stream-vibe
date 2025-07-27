@@ -1,13 +1,13 @@
-import styles from "./Accordion.module.scss"
+import styles from "./Accordion.scss"
 
 const Accordion = (props) => {
   const { title, id, name, isOpen, children } = props
 
   return (
-    <div className={`accordion ${styles.root}`}>
+    <div className="accordion">
       <details className="accordion__details" name={name} open={isOpen}>
-        <summary className={`accordion__summary ${styles.summary}`}>
-          <h3 lassName={`accordion__title h5 ${styles.title}`}>
+        <summary className="accordion__summary">
+          <h3 className="accordion__title h5">
             <span role="term" aria-details={id}>
               {title}
             </span>
