@@ -12,10 +12,10 @@ const Button = (props) => {
     label,
     isLabelHidden = false,
     iconName,
-    mode = "", // '' = (default) | 'transparent' | 'black-10'
+    mode = "", // '' = (default) | 'transparent' | 'black-10' | 'black-08'
     iconPosition = "before", // 'before' | 'after'
     hasFillIcon,
-    extraAttrs
+    extraAttrs,
   } = props
 
   const isLink = href !== undefined
