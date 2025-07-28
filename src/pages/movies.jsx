@@ -1,11 +1,13 @@
+import MoviesBanner from "@/sections/MoviesBanner"
+
 export const metadata = {
-  title: 'Movies & Shows',
+  title: "Movies & Shows",
 }
 
 export default function () {
   return (
     <>
-      <h1>Фильмы</h1>
+      <MoviesBanner />
     </>
   )
 }

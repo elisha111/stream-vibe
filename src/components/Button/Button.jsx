@@ -12,7 +12,7 @@ const Button = (props) => {
     label,
     isLabelHidden = false,
     iconName,
-    mode = "", // '' = (default) | 'transparent' | 'black-10' | 'black-08'
+    mode = "", // '' = (default) | 'transparent' | 'black-10' | 'black-08' | 'black-06'
     iconPosition = "before", // 'before' | 'after'
     hasFillIcon,
     extraAttrs,
