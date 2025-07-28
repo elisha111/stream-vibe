@@ -1,7 +1,7 @@
+import "./Tabs.scss"
 import classNames from "classnames"
-import React from "react"
-import styles from "./Tabs.module.scss"
-import getTabsElementsIdFromTitle from "./utils/getTabsElementsIdFromTitle"
+import getTabsElementsIdsFromTitle from "./utils/getTabsElementsIdsFromTitle"
+import TabsNavigation from "./components/TabsNavigations"
 
 const Tabs = (props) => {
   const {
@@ -11,25 +11,24 @@ const Tabs = (props) => {
     navigationTargetElementId = null,
   } = props
 
-  //   const titleFormated = getIdFromTitle(title)
-  //   const buttonId = `${titleFormated}-tab`
-  //   const contentId = `${titleFormated}-tab-panel`
-
-  const { buttonId, contentId } = getTabsElementsIdFromTitle(title)
-
   return (
     <div
-      className={classNames(className, `tabs`, styles.root)}
+      className={classNames(className, "tabs")}
       data-js-tabs={JSON.stringify({ navigationTargetElementId })}
     >
-      {!navigationTargetElementId && <div>НАВИГАЦИЯ ТАБОВ</div>}
+      {!navigationTargetElementId && (
+        <TabsNavigation title={title} items={items} />
+      )}
+
       <div className="tabs__body">
         {items.map((item, index) => {
           const { title, children, isActive } = item
 
+          const { buttonId, contentId } = getTabsElementsIdsFromTitle(title)
+
           return (
             <div
-              className={classNames(`tabs__content`, styles.content, {
+              className={classNames("tabs__content", {
                 "is-active": isActive,
               })}
               id={contentId}

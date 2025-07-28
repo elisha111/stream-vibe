@@ -1,31 +1,31 @@
+import "./TabsNavigations.scss"
 import classNames from "classnames"
-import React from "react"
-import styles from "./TabsNavigation.module.scss"
-import getTabsElementsIdFromTitle from "../../utils/getTabsElementsIdFromTitle"
+import getTabsElementsIdsFromTitle from "../../utils/getTabsElementsIdsFromTitle"
+import getIdFromTitle from "@/utils/getIdFromTitle"
 
-const TabsNavigation = (props) => {
+const TabsNavigations = (props) => {
   const { className, id, title, items = [] } = props
 
-  const titleFormated = getIdFromTitle(title)
-  const titleId = `${titleFormated}-title`
+  const titleFormatted = getIdFromTitle(title)
+  const titleId = `${titleFormatted}-title`
 
   return (
     <div
-      className={classNames(className, "tabs-navigation", styles.root)}
+      className={classNames(className, "tabs-navigation")}
       id={id}
       role="tablist"
       aria-labelledby={titleId}
       data-js-tabs-navigation=""
     >
-      <h3 className={`visually-hidden`} id={titleId}>
+      <h3 className="visually-hidden" id={titleId}>
         {title}
       </h3>
       {items.map((item, index) => {
-        const { buttonId, contentId } = getTabsElementsIdFromTitle(item.title)
+        const { buttonId, contentId } = getTabsElementsIdsFromTitle(item.title)
 
         return (
           <div
-            className={classNames(`tabs-navigation__button`, styles.button, {
+            className={classNames("tabs-navigation__button", {
               "is-active": item.isActive,
             })}
             id={buttonId}
@@ -44,4 +44,4 @@ const TabsNavigation = (props) => {
   )
 }
 
-export default TabsNavigation
+export default TabsNavigations
