@@ -687,11 +687,11 @@ const collectionGroups = [
     title: "Shows",
     items: [
       {
-        title: "Our Genres",
+        title: "Our Genres 2",
         categoryItems,
       },
       {
-        title: "Popular Top 10 In Genres",
+        title: "Popular Top 10 In Genres 2",
         categoryItems: [
           {
             title: "Action 1",
