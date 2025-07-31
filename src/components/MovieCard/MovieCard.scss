@@ -34,4 +34,10 @@
       color: var(--color-gray-75);
     }
   }
+
+  &__rating-badge {
+    &.badge {
+      padding-block: 7.5px;
+    }
+  }
 }
