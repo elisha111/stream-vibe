@@ -12,6 +12,7 @@ const MovieCard = (params) => {
     href = "/movie",
     released,
     rating,
+    season,
   } = params
 
   return (
@@ -22,6 +23,12 @@ const MovieCard = (params) => {
         {duration && (
           <Badge iconName="clock" iconAriaLabel="Duration" hasFillIcon>
             {duration}
+          </Badge>
+        )}
+
+        {season && (
+          <Badge iconName="catalog" iconAriaLabel="Season" hasFillIcon>
+            {season}
           </Badge>
         )}
 
