@@ -332,6 +332,173 @@ const collectionGroups = [
           },
         ],
       },
+      {
+        title: "New Releases",
+        movieItems: [
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/1.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/2.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/3.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/4.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/5.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/1.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/2.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/3.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/4.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/5.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/1.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/2.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/3.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/4.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/5.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/1.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/2.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/3.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/4.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+          {
+            title: "Morbius",
+            imgSrc: "/src/assets/images/movies/5.jpg",
+            released: {
+              label: '14 April 2023',
+              dateTime: '2023-04-14',
+            }
+          },
+
+        ],
+      },
     ],
   },
 ]
