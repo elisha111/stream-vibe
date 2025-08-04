@@ -4,6 +4,9 @@ import Slider from "@/components/Slider"
 import PersonCard from "@/components/PersonCard"
 import Button from "@/components/Button"
 import ReviewCard from "@/components/ReviewCard"
+import Icon from "@/components/Icon"
+import Tags from "@/components/Tags"
+import Ratings from "@/components/Ratings"
 
 const MovieDetails = () => {
   const titleId = "movie-details-title"
@@ -171,7 +174,65 @@ const MovieDetails = () => {
         </div>
       </div>
       <aside className="movie-details__info">
-        <div className="movie-datails__panel"></div>
+        <div className="movie-datails__panel">
+          <div className="movie-datails__groups">
+            <div className="movie-datails__group">
+              <h3 className="movie-datails__title">
+                <Icon name="calendar" />
+                <span>Released Year</span>
+              </h3>
+              <div className="movie-datails__description">
+                <time className="h6" dateTime="2022">
+                  2022
+                </time>
+              </div>
+            </div>
+            <div className="movie-datails__group">
+              <h3 className="movie-datails__title">
+                <Icon name="translate" />
+                <span>Available Languages</span>
+              </h3>
+              <Tags
+                items={["English", "Hindi", "Tamil", "Telegu", "Kannada"]}
+              />
+            </div>
+            <div className="movie-datails__group">
+              <h3 className="movie-datails__title">
+                <Icon name="star" />
+                <span>Ratings</span>
+              </h3>
+              <Ratings
+                items={[
+                  { title: "IMDb", ratingValue: 4.5 },
+                  { title: "Streamvibe", ratingValue: 4 },
+                ]}
+              />
+            </div>
+            <div className="movie-datails__group">
+              <h3 className="movie-datails__title">
+                <Icon name="gernes" />
+                <span>Gernes</span>
+              </h3>
+              <Tags items={["Action", "Adventure"]} />
+            </div>
+            <div className="movie-datails__group">
+              <h3 className="movie-datails__title">Director</h3>
+              <PersonCard
+                name="Rishab Shetty"
+                subtitle="From India"
+                imgSrc="/src/assets/images/people/director.jpg"
+              />
+            </div>
+            <div className="movie-datails__group">
+              <h3 className="movie-datails__title">Music</h3>
+              <PersonCard
+                name="B. Ajaneesh Loknath"
+                subtitle="From India"
+                imgSrc="/src/assets/images/people/music.jpg"
+              />
+            </div>
+          </div>
+        </div>
       </aside>
     </section>
   )
