@@ -6,6 +6,19 @@
       width: calc(100vw - var(--container-padding-x));
     }
   }
+
+  &__item {
+    width: auto;
+  }
+
+  &__navigation {
+    margin-top: fluid(40, 24);
+
+    &.slider-navigation {
+      justify-content: center;
+    }
+  }
+
   &__scrollbar {
     @include abs-x;
 

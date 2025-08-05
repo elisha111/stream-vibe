@@ -94,7 +94,7 @@ const MovieDetails = () => {
         Detailed movie information
       </h2>
       <div className="movie-details__main">
-        <div className="movie-datails__panel">
+        <div className="movie-details__panel movie-details__panel--description">
           <div className="movie-details__group">
             <h3 className="movie-details__title ">Description</h3>
             <div className="movie-details__description">
@@ -106,7 +106,7 @@ const MovieDetails = () => {
             </div>
           </div>
         </div>
-        <div className="movie-datails__panel">
+        <div className="movie-details__panel">
           <header className="movie-details__panel-header">
             <h3 className="movie-details__title">Cast</h3>
             <SliderNavigation
@@ -135,7 +135,7 @@ const MovieDetails = () => {
             ))}
           </Slider>
         </div>
-        <div className="movie-datails__panel">
+        <div className="movie-details__panel movie-details__panel--large-gap-y">
           <header className="movie-details__panel-header">
             <h3 className="movie-details__title">Reviews</h3>
             <Button
@@ -174,21 +174,21 @@ const MovieDetails = () => {
         </div>
       </div>
       <aside className="movie-details__info">
-        <div className="movie-datails__panel">
-          <div className="movie-datails__groups">
-            <div className="movie-datails__group">
-              <h3 className="movie-datails__title">
+        <div className="movie-details__panel">
+          <div className="movie-details__groups">
+            <div className="movie-details__group">
+              <h3 className="movie-details__title">
                 <Icon name="calendar" />
                 <span>Released Year</span>
               </h3>
-              <div className="movie-datails__description">
+              <div className="movie-details__description">
                 <time className="h6" dateTime="2022">
                   2022
                 </time>
               </div>
             </div>
-            <div className="movie-datails__group">
-              <h3 className="movie-datails__title">
+            <div className="movie-details__group">
+              <h3 className="movie-details__title">
                 <Icon name="translate" />
                 <span>Available Languages</span>
               </h3>
@@ -196,8 +196,8 @@ const MovieDetails = () => {
                 items={["English", "Hindi", "Tamil", "Telegu", "Kannada"]}
               />
             </div>
-            <div className="movie-datails__group">
-              <h3 className="movie-datails__title">
+            <div className="movie-details__group">
+              <h3 className="movie-details__title">
                 <Icon name="star" />
                 <span>Ratings</span>
               </h3>
@@ -208,23 +208,23 @@ const MovieDetails = () => {
                 ]}
               />
             </div>
-            <div className="movie-datails__group">
-              <h3 className="movie-datails__title">
+            <div className="movie-details__group">
+              <h3 className="movie-details__title">
                 <Icon name="gernes" />
                 <span>Gernes</span>
               </h3>
               <Tags items={["Action", "Adventure"]} />
             </div>
-            <div className="movie-datails__group">
-              <h3 className="movie-datails__title">Director</h3>
+            <div className="movie-details__group">
+              <h3 className="movie-details__title">Director</h3>
               <PersonCard
                 name="Rishab Shetty"
                 subtitle="From India"
                 imgSrc="/src/assets/images/people/director.jpg"
               />
             </div>
-            <div className="movie-datails__group">
-              <h3 className="movie-datails__title">Music</h3>
+            <div className="movie-details__group">
+              <h3 className="movie-details__title">Music</h3>
               <PersonCard
                 name="B. Ajaneesh Loknath"
                 subtitle="From India"
