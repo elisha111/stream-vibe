@@ -49,7 +49,7 @@ const MovieCard = (params) => {
             Released at{" "}
             <time
               className="movie-card__released-badge-label"
-              datetime={released.dateTime}
+              dateTime={released.dateTime}
             >
               {released.label}
             </time>
