@@ -3,6 +3,7 @@ import "./AccordionGroup.scss"
 
 const AccordionGroup = (props) => {
   const {
+    className,
     mode = "", // "" (default) | "dark"
     columns = 1,
     children,
@@ -14,7 +15,7 @@ const AccordionGroup = (props) => {
 
   return (
     <ListTag
-      className={classNames("accordion-group", {
+      className={classNames(className, "accordion-group", {
         [`accordion-group--${columns}-columns`]: columns > 1,
         "accordion-group--has-counter": isOrderedList,
         [`accordion-group--${mode}`]: mode,
