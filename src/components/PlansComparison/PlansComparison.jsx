@@ -2,6 +2,8 @@ import Section from "@/layouts/Section"
 import "./PlansComparison.scss"
 import Table from "@/components/Table"
 import Badge from "@/components/Badge"
+import Specifications from "@/components/Specifications"
+import Tabs from "@/components/Tabs"
 
 const PlansComparison = () => {
   const headCells = [
@@ -12,6 +14,7 @@ const PlansComparison = () => {
     {
       children: "Basic",
       width: "25%",
+      tabsTitle: "Basic",
     },
     {
       children: (
@@ -20,10 +23,12 @@ const PlansComparison = () => {
         </>
       ),
       width: "25%",
+      tabsTitle: "Standard",
     },
     {
       children: "Premium",
       width: "25%",
+      tabsTitle: "Premium",
     },
   ]
 
@@ -38,6 +43,7 @@ const PlansComparison = () => {
         "Access to a wider selection of movies and shows, including most new releases and exclusive content",
         "Access to a widest selection of movies and shows, including all new releases and Offline Viewing",
       ],
+      isWide: true,
     },
     {
       cells: [
@@ -46,6 +52,7 @@ const PlansComparison = () => {
         "Watch on Two device simultaneously",
         "Watch on Four device simultaneously",
       ],
+      isWide: true,
     },
     {
       cells: ["Free Trail", "7 Days", "7 Days", "7 Days"],
@@ -63,12 +70,38 @@ const PlansComparison = () => {
       cells: ["Ad - Free", "No", "Yes", "Yes"],
     },
     {
-      cells: ["Offline Viewing", "No", "Yes, for select titles.", "Yes, for all titles."],
+      cells: [
+        "Offline Viewing",
+        "No",
+        "Yes, for select titles.",
+        "Yes, for all titles.",
+      ],
     },
     {
-      cells: ["Family Sharing", "No", "Yes, up to 5 family members.", "Yes, up to 6 family members."],
+      cells: [
+        "Family Sharing",
+        "No",
+        "Yes, up to 5 family members.",
+        "Yes, up to 6 family members.",
+      ],
     },
   ]
+
+  const tabsItems = headCells
+    .filter((headCell) => headCell.tabsTitle)
+    .map((headCell, headCellIndex) => ({
+      title: headCell.tabsTitle,
+      isActive: headCellIndex === 0,
+      children: (
+        <Specifications
+          items={rows.map(({ cells, isWide }) => ({
+            key: cells[0],
+            value: cells[headCellIndex + 1],
+            isWide,
+          }))}
+        />
+      ),
+    }))
 
   return (
     <Section
@@ -76,7 +109,12 @@ const PlansComparison = () => {
       titleId="plans-comparison-title"
       description="StreamVibe offers three different plans to fit your needs: Basic, Standard, and Premium. Compare the features of each plan and choose the one that's right for you."
     >
-      <Table headCells={headCells} rows={rows} />
+      <Table className="hidden-mobile" headCells={headCells} rows={rows} />
+      <Tabs
+        className="visible-mobile"
+        title="plans-comparison-tabs-title"
+        items={tabsItems}
+      />
     </Section>
   )
 }
