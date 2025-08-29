@@ -5,7 +5,7 @@ import Header from "@/layouts/Header"
 import { Head } from "minista"
 import Banner from "./sections/Banner"
 
-export default function (props) {
+export default (props) => {
   const { children, title, url, isHeaderFixed } = props
 
   return (

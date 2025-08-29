@@ -44,5 +44,18 @@
       flex-direction: column;
       row-gap: 20px;
     }
+
+    &-link {
+      &:not(:last-child) {
+        align-items: center;
+
+        &::after {
+          content: "";
+          height: 1em;
+          margin-inline: fluid-to-laptop(20, 16);
+          border-right: var(--border);
+        }
+      }
+    }
   }
 }
